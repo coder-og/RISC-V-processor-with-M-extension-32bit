@@ -42,12 +42,12 @@
     
     
     always_comb begin
-    data1=regs[r1];
-    data2=regs[r2];
+    data1=(r1 == 0) ? 32'b0 : regs[r1];
+    data2=(r2 == 0) ? 32'b0 : regs[r2];
     end
     
    always_ff @(posedge clock) begin
-        if (regwrite) begin
+        if (regwrite && rd != 0) begin
             regs[rd] <= dataW;  
         end
     end
@@ -56,3 +56,4 @@ endmodule
     
 
         
+

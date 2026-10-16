@@ -27,6 +27,7 @@
         );
         always_comb
         begin
+        ALU_output = 0;
         case(Alu_result)
         2'b00:
         ALU_output=result1;
@@ -37,3 +38,4 @@
         endcase
         end
     endmodule
+

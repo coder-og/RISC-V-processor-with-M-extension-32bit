@@ -27,6 +27,7 @@ module ALU_source2#( parameter ins_width = 32)(
     );
     always_comb
     begin
+    reg_2 = 0;
     if (Alu_source_2==2'b00)
     begin
     reg_2=data2;
@@ -41,3 +42,4 @@ module ALU_source2#( parameter ins_width = 32)(
     end
     end
 endmodule
+
