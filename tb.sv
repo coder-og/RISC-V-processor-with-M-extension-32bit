@@ -38,6 +38,8 @@ module tb_top_processor;
 
     // Test sequence
     initial begin
+        $dumpfile("build/processor.vcd");
+        $dumpvars(0, uut);
         // Initialize reset
         reset = 1;
         #20;
@@ -58,3 +60,4 @@ module tb_top_processor;
     end
 
 endmodule
+
